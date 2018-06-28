@@ -546,7 +546,7 @@ var AuthGuard = /** @class */ (function () {
                 return true;
             }
             else {
-                _this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+                _this.router.navigate([''], { queryParams: { returnUrl: state.url } });
                 return false;
             }
         });
@@ -919,7 +919,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<button \n(click)=\"login()\"\nclass=\"btn btn-primary\">Login with Google</button>"
+module.exports = "\n<ng-template #anonymousUser>\n    <p>\n        <button \n        (click)=\"login()\"\n        class=\"btn btn-primary\">Login with Google</button>\n    </p>  \n  </ng-template>\n  \n      <p *ngIf=\"appUser; else anonymousUser\" class=\"table\">Logged in!</p>\n"
 
 /***/ }),
 
