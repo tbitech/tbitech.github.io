@@ -602,7 +602,7 @@ var AuthService = /** @class */ (function () {
     }
     AuthService.prototype.login = function () {
         // tslint:disable-next-line:prefer-const
-        var returnUrl = '/'; //this.route.snapshot.queryParamMap.get('returnUrl') || '/';
+        var returnUrl = ''; //this.route.snapshot.queryParamMap.get('returnUrl') || '/';
         localStorage.setItem('returnUrl', returnUrl);
         this.afAuth.auth.signInWithRedirect(new __WEBPACK_IMPORTED_MODULE_3_firebase__["auth"].GoogleAuthProvider());
     };
