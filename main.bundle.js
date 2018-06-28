@@ -481,6 +481,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_10__angular_router__["c" /* RouterModule */].forRoot([
                     { path: '', component: __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */] },
+                    { path: '/**', component: __WEBPACK_IMPORTED_MODULE_17__home_home_component__["a" /* HomeComponent */] },
                     { path: 'products', component: __WEBPACK_IMPORTED_MODULE_18__products_products_component__["a" /* ProductsComponent */] },
                     { path: 'shopping-cart', component: __WEBPACK_IMPORTED_MODULE_19__shooping_cart_shooping_cart_component__["a" /* ShoopingCartComponent */] },
                     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_25__login_login_component__["a" /* LoginComponent */] },
@@ -546,7 +547,7 @@ var AuthGuard = /** @class */ (function () {
                 return true;
             }
             else {
-                _this.router.navigate([''], { queryParams: { returnUrl: state.url } });
+                _this.router.navigate(['/Login'], { queryParams: { returnUrl: state.url } });
                 return false;
             }
         });
@@ -602,7 +603,7 @@ var AuthService = /** @class */ (function () {
     }
     AuthService.prototype.login = function () {
         // tslint:disable-next-line:prefer-const
-        var returnUrl = ''; //this.route.snapshot.queryParamMap.get('returnUrl') || '/';
+        var returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
         localStorage.setItem('returnUrl', returnUrl);
         this.afAuth.auth.signInWithRedirect(new __WEBPACK_IMPORTED_MODULE_3_firebase__["auth"].GoogleAuthProvider());
     };
