@@ -602,7 +602,7 @@ var AuthService = /** @class */ (function () {
     }
     AuthService.prototype.login = function () {
         // tslint:disable-next-line:prefer-const
-        var returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
+        var returnUrl = '/'; //this.route.snapshot.queryParamMap.get('returnUrl') || '/';
         localStorage.setItem('returnUrl', returnUrl);
         this.afAuth.auth.signInWithRedirect(new __WEBPACK_IMPORTED_MODULE_3_firebase__["auth"].GoogleAuthProvider());
     };
@@ -1215,7 +1215,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/shooping-cart/shooping-cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-template #anonymousUser>\n  <p>\n    Anonymous user\n  </p>  \n</ng-template>\n\n    <table *ngIf=\"appUser; else anonymousUser\" class=\"table\">\n        <thead>\n            <tr>\n                <th>ID</th>\n                <th>Time</th>\n                <th>Description</th>\n                <th>Value</th>\n                <th></th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let e of events$ | async\">\n                <td>{{e.ID}}</td>\n                <td>{{e.Time}}</td>\n                <td>{{e.Description}}</td>\n                <td>{{e.Value}}</td>\n                <td> \n                </td>\n            </tr>\n        </tbody>\n    </table>\n  \n  \n        \n\n"
+module.exports = "<ng-template #anonymousUser>\n  <p>\n    Anonymous user\n  </p>  \n</ng-template>\n\n    <table *ngIf=\"appUser; else anonymousUser\" class=\"table\">\n        <thead>\n            <tr>\n                <th>ID</th>\n                <th>Date</th>\n                <th>Time</th>\n                <th>Description</th>\n                <th>Value</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let e of events$ | async\">\n                <td>{{e.ID}}</td>\n                <td>{{e.Datum}}</td>\n                <td>{{e.Time}}</td>\n                <td>{{e.Description}}</td>\n                <td>{{e.Val}}</td>\n            </tr>\n        </tbody>\n    </table>\n  \n  \n        \n\n"
 
 /***/ }),
 
