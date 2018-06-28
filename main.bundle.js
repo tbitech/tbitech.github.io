@@ -17,6 +17,39 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 
 /***/ }),
 
+/***/ "../../../../../src/app/Pipes/reverse.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReversePipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ReversePipe = /** @class */ (function () {
+    function ReversePipe() {
+    }
+    ReversePipe.prototype.transform = function (value) {
+        if (!value)
+            return;
+        return value.reverse();
+    };
+    ReversePipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Pipe */])({
+            name: 'reverse'
+        })
+    ], ReversePipe);
+    return ReversePipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/admin-auth-guard.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -417,12 +450,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__user_service__ = __webpack_require__("../../../../../src/app/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__admin_product_form_product_form_component__ = __webpack_require__("../../../../../src/app/admin/product-form/product-form.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__category_service__ = __webpack_require__("../../../../../src/app/category.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__Pipes_reverse_pipe__ = __webpack_require__("../../../../../src/app/Pipes/reverse.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -469,7 +504,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_23__admin_admin_products_admin_products_component__["a" /* AdminProductsComponent */],
                 __WEBPACK_IMPORTED_MODULE_24__admin_admin_orders_admin_orders_component__["a" /* AdminOrdersComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__admin_product_form_product_form_component__["a" /* ProductFormComponent */]
+                __WEBPACK_IMPORTED_MODULE_27__admin_product_form_product_form_component__["a" /* ProductFormComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__Pipes_reverse_pipe__["a" /* ReversePipe */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["a" /* BrowserModule */],
@@ -808,6 +844,7 @@ var CheckOutComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -817,6 +854,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 var EventService = /** @class */ (function () {
@@ -1215,7 +1253,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/shooping-cart/shooping-cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-template #anonymousUser>\n  <p>\n    Anonymous user\n  </p>  \n</ng-template>\n\n    <table *ngIf=\"appUser; else anonymousUser\" class=\"table\">\n        <thead>\n            <tr>\n                <th>ID</th>\n                <th>Date</th>\n                <th>Time</th>\n                <th>Description</th>\n                <th>Value</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let e of events$ | async\">\n                <td>{{e.ID}}</td>\n                <td>{{e.Datum}}</td>\n                <td>{{e.Time}}</td>\n                <td>{{e.Description}}</td>\n                <td>{{e.Val}}</td>\n            </tr>\n        </tbody>\n    </table>\n  \n  \n        \n\n"
+module.exports = "<ng-template #anonymousUser>\n  <p>\n    Anonymous user\n  </p>  \n</ng-template>\n\n    <table *ngIf=\"appUser; else anonymousUser\" class=\"table\">\n        <thead>\n            <tr>\n                <th>ID</th>\n                <th>Date</th>\n                <th>Time</th>\n                <th>Description</th>\n                <th>Value</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr *ngFor=\"let e of events$ | async | reverse\">\n                <td>{{e.ID}}</td>\n                <td>{{e.Datum}}</td>\n                <td>{{e.Time}}</td>\n                <td>{{e.Description}}</td>\n                <td>{{e.Val}}</td>\n            </tr>\n        </tbody>\n    </table>\n  \n  \n        \n\n"
 
 /***/ }),
 
