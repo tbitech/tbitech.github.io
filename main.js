@@ -45,7 +45,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _monitoring_monitoring_list_monitoring_list_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./monitoring/monitoring-list/monitoring-list.component */ "./src/app/monitoring/monitoring-list/monitoring-list.component.ts");
 /* harmony import */ var _presentation_en_en_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./presentation/en/en.component */ "./src/app/presentation/en/en.component.ts");
 /* harmony import */ var _presentation_fi_fi_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./presentation/fi/fi.component */ "./src/app/presentation/fi/fi.component.ts");
-/* harmony import */ var _ui_ssr_page_ssr_page_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ui/ssr-page/ssr-page.component */ "./src/app/ui/ssr-page/ssr-page.component.ts");
+/* harmony import */ var _ui_about_page_about_page_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ui/about-page/about-page.component */ "./src/app/ui/about-page/about-page.component.ts");
+/* harmony import */ var _ui_contact_page_contact_page_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ui/contact-page/contact-page.component */ "./src/app/ui/contact-page/contact-page.component.ts");
+/* harmony import */ var _ui_ssr_page_ssr_page_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./ui/ssr-page/ssr-page.component */ "./src/app/ui/ssr-page/ssr-page.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,9 +67,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var routes = [
     { path: '', component: _ui_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_4__["HomePageComponent"] },
     { path: 'login', component: _ui_user_login_user_login_component__WEBPACK_IMPORTED_MODULE_3__["UserLoginComponent"] },
+    { path: 'contact', component: _ui_contact_page_contact_page_component__WEBPACK_IMPORTED_MODULE_13__["ContactPageComponent"] },
+    { path: 'about', component: _ui_about_page_about_page_component__WEBPACK_IMPORTED_MODULE_12__["AboutPageComponent"] },
     { path: 'notes', component: _notes_notes_list_notes_list_component__WEBPACK_IMPORTED_MODULE_5__["NotesListComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]] },
     { path: 'uploads', component: _uploads_upload_page_upload_page_component__WEBPACK_IMPORTED_MODULE_6__["UploadPageComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]] },
     { path: 'users', component: _users_user_list_user_list_component__WEBPACK_IMPORTED_MODULE_7__["UserListComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]] },
@@ -75,7 +81,7 @@ var routes = [
     { path: 'monitoring', component: _monitoring_monitoring_list_monitoring_list_component__WEBPACK_IMPORTED_MODULE_9__["MonitoringListComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]] },
     { path: 'presentation/en', component: _presentation_en_en_component__WEBPACK_IMPORTED_MODULE_10__["EnComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]] },
     { path: 'presentation/fi', component: _presentation_fi_fi_component__WEBPACK_IMPORTED_MODULE_11__["FiComponent"], canActivate: [_core_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]] },
-    { path: 'ssr', component: _ui_ssr_page_ssr_page_component__WEBPACK_IMPORTED_MODULE_12__["SsrPageComponent"] }
+    { path: 'ssr', component: _ui_ssr_page_ssr_page_component__WEBPACK_IMPORTED_MODULE_14__["SsrPageComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -100,7 +106,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"wrapper\" class=\"content\">\r\n    <main-nav></main-nav>\r\n\r\n    <div class=\"columns\">\r\n        <aside class=\"column is-2\">\r\n            <user-profile></user-profile>\r\n        </aside>\r\n\r\n        <main class=\"column is-8\">\r\n           \r\n   \r\n            <notification-message></notification-message>\r\n\r\n            <router-outlet></router-outlet>\r\n        </main>\r\n    </div>\r\n\r\n\r\n    <footer class=\"footer\">\r\n        <p>   \r\n         <a routerLink=\"/\">\r\n            <img src=\"assets/totech_logo.jpg\" width=\"100px\" height=\"100px\" alt=\"TOTECH\" />\r\n        </a>\r\n       <i><b> Web Application</b></i></p>\r\n        <p>&copy; CopyRight www.totech.fi 2018</p>    \r\n    </footer>\r\n\r\n</div>"
+module.exports = "<div id=\"wrapper\" class=\"content\">\r\n    <main-nav></main-nav>\r\n\r\n    <div class=\"columns\">\r\n        <aside class=\"column is-2\">\r\n            <user-profile></user-profile>\r\n        </aside>\r\n\r\n        <main class=\"column is-8\">\r\n           \r\n   \r\n            <notification-message></notification-message>\r\n\r\n            <router-outlet></router-outlet>\r\n        </main>\r\n    </div>\r\n\r\n\r\n    <footer class=\"footer\">\r\n        <!--Partner logos-->\r\n        <logos></logos>\r\n        <p>   \r\n         <a routerLink=\"/\">\r\n            <img src=\"assets/totech_logo.jpg\" width=\"100px\" height=\"100px\" alt=\"TOTECH\" />\r\n        </a>\r\n       <i><b> Web Application</b></i></p>\r\n        <p>&copy; CopyRight www.totech.fi 2018</p>    \r\n    </footer>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1535,6 +1541,132 @@ var PresentationModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/ui/about-page/about-page.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/ui/about-page/about-page.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"centered-wrapper\">\n    <div class=\"centered-content>\">    \n    <a routerLink=\"/\" align=\"center\">\n    <img src=\"assets/totech_logo.jpg\" alt=\"TOTECH\" />\n</a>\n<hr>\n<p>\n  TOTECH is a new company providing professional help with automation projects and also other consulting or services in the area of Industrial Automation, Industry 4.0 and IoT.\n  Our speciality is connecting the automation ( machines, processes or whole factory ) to the IT side of the customers organization or we can connect it to our cloud and custom \n  made webapplications to provide the full realtime monitoring system for our customers.\n</p>\n<p>\n  We have our own, well tested, stable solution to get correct data reliably and automatically \n  ( with no need for operators interactions ) from PLC's to PC ( LAN TCP/IP ) and further up to databases \n  or cloud and finally to the end user applications. In the end user application the monitored realtime data from the machines, \n  processes or whole factory can be combined with other data ( business side orders, product inventory etc. ) to\n  make powerfull solutions that fully assists our customers in whatever industry they operate.\n</p>\n<hr>\n<div>\n    <h3>If you have an automation project or you are otherwise interested in our solutions, </h3>\n    <h3>Do not hesitate to contact us </h3>\n    <h3>or register for a user account so we can contact you.</h3>\n  \n  </div>\n  \n</div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/ui/about-page/about-page.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/ui/about-page/about-page.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".centered-wrapper {\n  position: relative;\n  text-align: center; }\n\n.centered-wrapper:before {\n  content: \"\";\n  position: relative;\n  display: inline-block;\n  width: 0;\n  height: 100%;\n  vertical-align: middle; }\n\n.centered-content {\n  display: inline-block;\n  vertical-align: middle; }\n"
+
+/***/ }),
+
+/***/ "./src/app/ui/about-page/about-page.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/ui/about-page/about-page.component.ts ***!
+  \*******************************************************/
+/*! exports provided: AboutPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutPageComponent", function() { return AboutPageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutPageComponent = /** @class */ (function () {
+    function AboutPageComponent() {
+    }
+    AboutPageComponent.prototype.ngOnInit = function () {
+    };
+    AboutPageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'about-page',
+            template: __webpack_require__(/*! ./about-page.component.html */ "./src/app/ui/about-page/about-page.component.html"),
+            styles: [__webpack_require__(/*! ./about-page.component.scss */ "./src/app/ui/about-page/about-page.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutPageComponent);
+    return AboutPageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/ui/contact-page/contact-page.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/ui/contact-page/contact-page.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"centered-wrapper\">\n    <div class=\"centered-content>\">    \n    <a routerLink=\"/\" align=\"center\">\n    <img src=\"assets/totech_logo.jpg\" alt=\"TOTECH\" />\n</a>\n<h1>www.totech.fi</h1>\n\n<p>Email: <a href=\"mailto:toni.pitkakangas@totech.fi?Subject=Hello%20TOTECH\" target=\"_top\">toni.pitkakangas@totech.fi</a></p>\n<p>Phone: +358 407356596</p>\n\n<hr>\n<h3>Register for a user account to get more information.</h3>\n</div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/ui/contact-page/contact-page.component.scss":
+/*!*************************************************************!*\
+  !*** ./src/app/ui/contact-page/contact-page.component.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".centered-wrapper {\n  position: relative;\n  text-align: center; }\n\n.centered-wrapper:before {\n  content: \"\";\n  position: relative;\n  display: inline-block;\n  width: 0;\n  height: 100%;\n  vertical-align: middle; }\n\n.centered-content {\n  display: inline-block;\n  vertical-align: middle; }\n"
+
+/***/ }),
+
+/***/ "./src/app/ui/contact-page/contact-page.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/ui/contact-page/contact-page.component.ts ***!
+  \***********************************************************/
+/*! exports provided: ContactPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageComponent", function() { return ContactPageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ContactPageComponent = /** @class */ (function () {
+    function ContactPageComponent() {
+    }
+    ContactPageComponent.prototype.ngOnInit = function () {
+    };
+    ContactPageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'contact-page',
+            template: __webpack_require__(/*! ./contact-page.component.html */ "./src/app/ui/contact-page/contact-page.component.html"),
+            styles: [__webpack_require__(/*! ./contact-page.component.scss */ "./src/app/ui/contact-page/contact-page.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ContactPageComponent);
+    return ContactPageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/ui/home-page/home-page.component.html":
 /*!*******************************************************!*\
   !*** ./src/app/ui/home-page/home-page.component.html ***!
@@ -1542,7 +1674,7 @@ var PresentationModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n         <!--Partner logos-->\r\n         <logos></logos>\r\n         \r\n<div class=\"centered-wrapper\">\r\n    <div class=\"centered-content>\">    \r\n    <a routerLink=\"/\" align=\"center\">\r\n    <img src=\"assets/totech_logo.jpg\" alt=\"TOTECH\" />\r\n</a>\r\n<h1>Web Application</h1>\r\n\r\n<p>Coming soon...</p>\r\n\r\n<p>Email: <a href=\"mailto:toni.pitkakangas@totech.fi?Subject=Hello%20TOTECH\" target=\"_top\">toni.pitkakangas@totech.fi</a></p>\r\n<p>Phone: +358 407356596</p>\r\n</div>\r\n</div>"
+module.exports = "\r\n         \r\n<div class=\"centered-wrapper\">\r\n    <div class=\"centered-content>\">    \r\n    <a routerLink=\"/\" align=\"center\">\r\n    <img src=\"assets/totech_logo.jpg\" alt=\"TOTECH\" />\r\n</a>\r\n<h1>Web Application</h1>\r\n\r\n<p>Coming soon...</p>\r\n\r\n<p>Email: <a href=\"mailto:toni.pitkakangas@totech.fi?Subject=Hello%20TOTECH\" target=\"_top\">toni.pitkakangas@totech.fi</a></p>\r\n<p>Phone: +358 407356596</p>\r\n</div>\r\n</div>\r\n      "
 
 /***/ }),
 
@@ -1668,7 +1800,7 @@ var LoadingSpinnerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <ul style = \"list-style-type:none\">\n      <li style = \"float:left\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://industrial.omron.fi/fi/home\"> <img src=\"assets/logos/OMRON_Logo_png.png\" alt=\"OMRON\" /></a></li>\n    <li style = \"float:right\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bedika.fi/\"> <img src=\"assets/logos/BEDIKA_Logo_png.png\" alt=\"BEDIKA\" /></a></li>\n  </ul>\n</div>\n<hr>\n"
+module.exports = "<div class=\"columns\">\n    <aside class=\"column is-3\">\n        <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.engelglobal.com/en/fi/contact/local-contacts/countryContact/finland.html\"> <img src=\"assets/logos/ENGEL_Logo_png.png\" alt=\"ENGEL\" /></a>\n    </aside>\n\n    <main class=\"column is-4\">\n        <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://industrial.omron.fi/fi/home\"> <img src=\"assets/logos/OMRON_Logo_png.png\" alt=\"OMRON\" /></a>\n       \n    </main>\n    <aside class=\"column is-3\">\n        <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bedika.fi/\"> <img src=\"assets/logos/BEDIKA_Logo_png.png\" alt=\"BEDIKA\" /></a>\n        </aside>\n</div>\n<hr>"
 
 /***/ }),
 
@@ -1731,7 +1863,7 @@ var LogosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar\" role=\"navigation\" aria-label=\"main navigation\">\r\n    <div class=\"navbar-brand\">\r\n        <a routerLink=\"/\">\r\n            <img src=\"assets/totech_logo_inverse.jpg\" width = \"20%\" height=\"20%\"alt=\"TOTECH\" />\r\n        </a>\r\n\r\n        <a id=\"navToggle\" role=\"button\" class=\"navbar-burger\" (click)=\"toggleCollapse()\" [ngClass]=\"{'is-active': show}\">\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n        </a>\r\n    </div>\r\n\r\n    <div class=\"navbar-menu\" [ngClass]=\"{'is-active': show}\">\r\n   \r\n            <div class=\"navbar-end\">\r\n            <a style=\"color:orangered\" routerLink=\"/\">\r\n        Contact\r\n      </a>\r\n      <span>&nbsp;&nbsp;</span>\r\n            <a style=\"color:orangered\" routerLink=\"/\">\r\n        About\r\n            </a>\r\n        </div>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar\" role=\"navigation\" aria-label=\"main navigation\">\r\n    <div class=\"navbar-brand\">\r\n        <a routerLink=\"/\">\r\n            <img src=\"assets/totech_logo_inverse.jpg\" width = \"20%\" height=\"20%\"alt=\"TOTECH\" />\r\n        </a>\r\n\r\n        <a id=\"navToggle\" role=\"button\" class=\"navbar-burger\" (click)=\"toggleCollapse()\" [ngClass]=\"{'is-active': show}\">\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n        </a>\r\n    </div>\r\n\r\n    <div class=\"navbar-menu\" [ngClass]=\"{'is-active': show}\">\r\n   \r\n            <div class=\"navbar-end\">\r\n            <a style=\"color:orangered\" routerLink=\"/contact\">\r\n        Contact\r\n      </a>\r\n      <span>&nbsp;&nbsp;</span>\r\n            <a style=\"color:orangered\" routerLink=\"/about\">\r\n        About\r\n            </a>\r\n        </div>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1981,12 +2113,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_form_user_form_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./user-form/user-form.component */ "./src/app/ui/user-form/user-form.component.ts");
 /* harmony import */ var _ssr_page_ssr_page_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ssr-page/ssr-page.component */ "./src/app/ui/ssr-page/ssr-page.component.ts");
 /* harmony import */ var _logos_logos_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./logos/logos.component */ "./src/app/ui/logos/logos.component.ts");
+/* harmony import */ var _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./about-page/about-page.component */ "./src/app/ui/about-page/about-page.component.ts");
+/* harmony import */ var _contact_page_contact_page_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./contact-page/contact-page.component */ "./src/app/ui/contact-page/contact-page.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -2016,7 +2152,9 @@ var UiModule = /** @class */ (function () {
                 _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_10__["UserProfileComponent"],
                 _user_form_user_form_component__WEBPACK_IMPORTED_MODULE_11__["UserFormComponent"],
                 _ssr_page_ssr_page_component__WEBPACK_IMPORTED_MODULE_12__["SsrPageComponent"],
-                _logos_logos_component__WEBPACK_IMPORTED_MODULE_13__["LogosComponent"]
+                _logos_logos_component__WEBPACK_IMPORTED_MODULE_13__["LogosComponent"],
+                _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_14__["AboutPageComponent"],
+                _contact_page_contact_page_component__WEBPACK_IMPORTED_MODULE_15__["ContactPageComponent"]
             ],
             exports: [
                 _main_nav_main_nav_component__WEBPACK_IMPORTED_MODULE_7__["MainNavComponent"],
