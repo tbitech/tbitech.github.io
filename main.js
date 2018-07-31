@@ -1731,7 +1731,7 @@ var LogosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar bg-dark\" role=\"navigation\" aria-label=\"main navigation\">\r\n    <div class=\"navbar-brand\">\r\n        <a routerLink=\"/\">\r\n            <img src=\"assets/totech_logo_inverse.jpg\" width = \"20%\" height=\"20%\"alt=\"TOTECH\" />\r\n        </a>\r\n\r\n        <a id=\"navToggle\" role=\"button\" class=\"navbar-burger\" (click)=\"toggleCollapse()\" [ngClass]=\"{'is-active': show}\">\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n        </a>\r\n    </div>\r\n\r\n    <div class=\"navbar-menu\" [ngClass]=\"{'is-active': show}\">\r\n   \r\n            <div class=\"navbar-end\">\r\n            <a routerLink=\"/\">\r\n        Contact\r\n      </a>\r\n      <span>&nbsp;&nbsp;</span>\r\n            <a routerLink=\"/\">\r\n        About\r\n            </a>\r\n        </div>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar\" role=\"navigation\" aria-label=\"main navigation\">\r\n    <div class=\"navbar-brand\">\r\n        <a routerLink=\"/\">\r\n            <img src=\"assets/totech_logo_inverse.jpg\" width = \"20%\" height=\"20%\"alt=\"TOTECH\" />\r\n        </a>\r\n\r\n        <a id=\"navToggle\" role=\"button\" class=\"navbar-burger\" (click)=\"toggleCollapse()\" [ngClass]=\"{'is-active': show}\">\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n            <span aria-hidden=\"true\"></span>\r\n        </a>\r\n    </div>\r\n\r\n    <div class=\"navbar-menu\" [ngClass]=\"{'is-active': show}\">\r\n   \r\n            <div class=\"navbar-end\">\r\n            <a style=\"color:orangered\" routerLink=\"/\">\r\n        Contact\r\n      </a>\r\n      <span>&nbsp;&nbsp;</span>\r\n            <a style=\"color:orangered\" routerLink=\"/\">\r\n        About\r\n            </a>\r\n        </div>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1742,7 +1742,7 @@ module.exports = "<nav class=\"navbar bg-dark\" role=\"navigation\" aria-label=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "nav {\n  border-bottom: 1px solid #E4E4E4;\n  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);\n  margin-bottom: 25px; }\n\n.navbar-default .navbar-brand {\n  padding: 0 3em 0 2em;\n  color: orangered !important; }\n\n.navbar-menu {\n  padding-right: 3em; }\n"
+module.exports = ".navbar {\n  background-color: black;\n  border-color: orangered; }\n"
 
 /***/ }),
 
