@@ -195,6 +195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
 /* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
 /* harmony import */ var angularfire2_auth__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! angularfire2/auth */ "./node_modules/angularfire2/auth/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -225,6 +226,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 //import { AngularFireFunctionsModule } from 'angularfire2/functions';
+
+//import { AngularFireDatabase } from 'angularfire2/database';
 //Angular Material
 //import { MaterialModule } from './material/material.module';
 // IMPORTANT
@@ -256,6 +259,7 @@ var AppModule = /** @class */ (function () {
                 angularfire2_auth__WEBPACK_IMPORTED_MODULE_20__["AngularFireAuthModule"],
                 angularfire2_storage__WEBPACK_IMPORTED_MODULE_19__["AngularFireStorageModule"],
                 //AngularFireFunctionsModule,
+                angularfire2_database__WEBPACK_IMPORTED_MODULE_21__["AngularFireDatabaseModule"],
                 _angular_service_worker__WEBPACK_IMPORTED_MODULE_7__["ServiceWorkerModule"].register('/ngsw-worker.js', {
                     enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].production
                 }),
@@ -886,6 +890,88 @@ var MachinesService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/monitoring/events.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/monitoring/events.service.ts ***!
+  \**********************************************/
+/*! exports provided: EventsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventsService", function() { return EventsService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var EventsService = /** @class */ (function () {
+    function EventsService(db) {
+        this.db = db;
+    }
+    EventsService.prototype.getAll = function (machinename) {
+        return this.db.list("/events/" + machinename);
+    };
+    EventsService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
+    ], EventsService);
+    return EventsService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/monitoring/livedata.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/monitoring/livedata.service.ts ***!
+  \************************************************/
+/*! exports provided: LivedataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LivedataService", function() { return LivedataService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LivedataService = /** @class */ (function () {
+    function LivedataService(db) {
+        this.db = db;
+    }
+    LivedataService.prototype.getAll = function (machinename) {
+        return this.db.list("/livedata/" + machinename);
+    };
+    LivedataService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
+    ], LivedataService);
+    return LivedataService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/monitoring/monitoring-detail/monitoring-detail.component.html":
 /*!*******************************************************************************!*\
   !*** ./src/app/monitoring/monitoring-detail/monitoring-detail.component.html ***!
@@ -893,7 +979,7 @@ var MachinesService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<hr class=\"dbline\">\n\n<div class=\"tab-buttons\">\n    <button class=\"button\" (click)=\"showTab('main')\">\n        Main\n    </button>\n\n    <button class=\"button\" (click)=\"showTab('data')\">\n       Data\n    </button>\n\n    <button class=\"button\" (click)=\"showTab('events')\">\n        Events\n     </button>\n\n     <button class=\"button\" (click)=\"showTab('errorcodes')\">\n        Errors\n     </button>\n</div>\n<hr>\n<div class=\"tab-content\">\n    <div class=\"tab\" *ngIf=\"tabId === 'main'\">\n        <div class=\"basic-note\">\n            <h3><b>Machine Name: {{ machine.name }}</b></h3>\n                 \n            <p>Machine IP: {{ machine.ip }}</p>\n        </div>\n    </div>\n\n    <div class=\"tab\" *ngIf=\"tabId === 'data'\">\n        \n      Data here\n\n    </div>\n    <div class=\"tab\" *ngIf=\"tabId === 'events'\">\n        \n        Events here\n  \n      </div>\n   \n          <div class=\"tab\" *ngIf=\"tabId === 'errorcodes'\">\n        \n              Error codes here\n        \n            </div>          \n     \n</div>\n<hr class=\"dbline\">"
+module.exports = "\n<hr class=\"dbline\">\n\n<div class=\"tab-buttons\">\n    <button class=\"button\" (click)=\"showTab('main')\">\n        Main\n    </button>\n\n    <button class=\"button\" (click)=\"showTab('data')\">\n       Data\n    </button>\n\n    <button class=\"button\" (click)=\"showTab('events')\">\n        Events\n     </button>\n\n     <button class=\"button\" (click)=\"showTab('errorcodes')\">\n        Errors\n     </button>\n</div>\n<hr>\n<div class=\"tab-content\">\n    <div class=\"tab\" *ngIf=\"tabId === 'main'\">\n        <div class=\"basic-note\">\n            <h3><b>Machine Name: {{ machine.name }}</b></h3>\n                 \n            <p>Machine IP: {{ machine.ip }}</p>\n        </div>\n    </div>\n\n    <div class=\"tab\" *ngIf=\"tabId === 'data'\">\n        \n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th>ID</th>\n                    <th>Date</th>\n                    <th>Time</th>\n                    <th>Description</th>\n                    <th>Value</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let ld of livedata$ | async\">\n                    <td>{{ld.ID}}</td>\n                    <td>{{ld.Datum}}</td>\n                    <td>{{ld.Time}}</td>\n                    <td>{{ld.Description}}</td>\n                    <td>{{ld.Val}}</td>\n                </tr>\n            </tbody>\n        </table>\n        \n\n    </div>\n    <div class=\"tab\" *ngIf=\"tabId === 'events'\">\n        \n            <table class=\"table\">\n                    <thead>\n                        <tr>\n                            <th>ID</th>\n                            <th>Date</th>\n                            <th>Time</th>\n                            <th>Description</th>\n                            <th>Value</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor=\"let e of events$ | async | reversepipe\">\n                            <td>{{e.ID}}</td>\n                            <td>{{e.Datum}}</td>\n                            <td>{{e.Time}}</td>\n                            <td>{{e.Description}}</td>\n                            <td>{{e.Val}}</td>\n                        </tr>\n                    </tbody>\n                </table>\n  \n      </div>\n   \n          <div class=\"tab\" *ngIf=\"tabId === 'errorcodes'\">\n        \n              Error codes here\n        \n            </div>          \n     \n</div>\n<hr class=\"dbline\">"
 
 /***/ }),
 
@@ -919,7 +1005,17 @@ module.exports = "hr.dbline {\n  border-top: 3px double #8c8b8b; }\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonitoringDetailComponent", function() { return MonitoringDetailComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _machines_machines_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../machines/machines.service */ "./src/app/machines/machines.service.ts");
+/* harmony import */ var _events_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../events.service */ "./src/app/monitoring/events.service.ts");
+/* harmony import */ var _livedata_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../livedata.service */ "./src/app/monitoring/livedata.service.ts");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -930,13 +1026,32 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+//import { MachinesService } from '../../machines/machines.service';
+
+
 
 var MonitoringDetailComponent = /** @class */ (function () {
-    function MonitoringDetailComponent(machinesService) {
-        //this.monitoredMachine = this.machinesService.getByMachineRef(this.machine.id);
-        this.machinesService = machinesService;
+    function MonitoringDetailComponent(eventsservice, livedataservice) {
+        this.eventsservice = eventsservice;
+        this.livedataservice = livedataservice;
         this.tabId = 'main';
     }
+    Object.defineProperty(MonitoringDetailComponent.prototype, "name", {
+        get: function () { return this._name; },
+        set: function (name) {
+            this._name = (name && name.trim()) || 'Test2';
+            //Refresch event subscription according to machine name here
+            this.events$ = this.eventsservice.getAll(this._name).snapshotChanges().map(function (actions) {
+                return actions.map(function (action) { return (__assign({ key: action.key }, action.payload.val())); });
+            });
+            //Refresh livedata subscription according to machine name here
+            this.livedata$ = this.livedataservice.getAll(this._name).snapshotChanges().map(function (actions) {
+                return actions.map(function (action) { return (__assign({ key: action.key }, action.payload.val())); });
+            });
+        },
+        enumerable: true,
+        configurable: true
+    });
     MonitoringDetailComponent.prototype.showTab = function (tabId) {
         this.tabId = tabId;
     };
@@ -944,13 +1059,18 @@ var MonitoringDetailComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
     ], MonitoringDetailComponent.prototype, "machine", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String),
+        __metadata("design:paramtypes", [String])
+    ], MonitoringDetailComponent.prototype, "name", null);
     MonitoringDetailComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'monitoring-detail',
             template: __webpack_require__(/*! ./monitoring-detail.component.html */ "./src/app/monitoring/monitoring-detail/monitoring-detail.component.html"),
             styles: [__webpack_require__(/*! ./monitoring-detail.component.scss */ "./src/app/monitoring/monitoring-detail/monitoring-detail.component.scss")]
         }),
-        __metadata("design:paramtypes", [_machines_machines_service__WEBPACK_IMPORTED_MODULE_1__["MachinesService"]])
+        __metadata("design:paramtypes", [_events_service__WEBPACK_IMPORTED_MODULE_1__["EventsService"], _livedata_service__WEBPACK_IMPORTED_MODULE_2__["LivedataService"]])
     ], MonitoringDetailComponent);
     return MonitoringDetailComponent;
 }());
@@ -966,7 +1086,7 @@ var MonitoringDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n        <div class=\"btn-group btn-group-toggle\" ngbRadioGroup name=\"radioBasic\" [(ngModel)]=\"selectedmachine\">\n\n                <div *ngFor=\"let mach of machines | async\">\n                                <label ngbButtonLabel class=\"btn-primary\">\n                                <input ngbButton type=\"radio\" [value] = mach> {{mach.name}}\n                                </label>\n                        <!--                      \n                        <button (click)=\"showMachine(mach)\">\n                                {{mach.name}}\n                            </button>\n                        -->\n        \n                </div>\n        \n        </div>\n\n\n                <monitoring-detail [machine]=\"selectedmachine\"></monitoring-detail>\n\n"
+module.exports = "\n\n        <div class=\"btn-group btn-group-toggle\" ngbRadioGroup name=\"radioBasic\" [(ngModel)]=\"selectedmachine\">\n\n                <div *ngFor=\"let mach of machines | async\">\n                                <label ngbButtonLabel class=\"btn-primary\">\n                                <input ngbButton type=\"radio\" [value] = mach> {{mach.name}}\n                                </label>\n                        <!--                      \n                        <button (click)=\"showMachine(mach)\">\n                                {{mach.name}}\n                            </button>\n                        -->\n        \n                </div>\n        \n        </div>\n\n\n                <monitoring-detail [machine]=\"selectedmachine\" name='{{selectedmachine.name}}'></monitoring-detail>\n\n"
 
 /***/ }),
 
@@ -1008,13 +1128,10 @@ var MonitoringListComponent = /** @class */ (function () {
     function MonitoringListComponent(machinesService) {
         this.machinesService = machinesService;
         this.selectedmachine = "";
+        this.selectedmachinename = "";
     }
     MonitoringListComponent.prototype.ngOnInit = function () {
         this.machines = this.machinesService.getData();
-    };
-    MonitoringListComponent.prototype.showMachine = function (machi) {
-        this.selectedmachine = machi;
-        //console.log(machi.id);
     };
     MonitoringListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1047,12 +1164,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _monitoring_detail_monitoring_detail_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./monitoring-detail/monitoring-detail.component */ "./src/app/monitoring/monitoring-detail/monitoring-detail.component.ts");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _reversepipe_pipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reversepipe.pipe */ "./src/app/monitoring/reversepipe.pipe.ts");
+/* harmony import */ var _events_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./events.service */ "./src/app/monitoring/events.service.ts");
+/* harmony import */ var _livedata_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./livedata.service */ "./src/app/monitoring/livedata.service.ts");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -1070,10 +1195,49 @@ var MonitoringModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"]
             ],
-            declarations: [_monitoring_list_monitoring_list_component__WEBPACK_IMPORTED_MODULE_2__["MonitoringListComponent"], _monitoring_detail_monitoring_detail_component__WEBPACK_IMPORTED_MODULE_3__["MonitoringDetailComponent"]]
+            declarations: [_monitoring_list_monitoring_list_component__WEBPACK_IMPORTED_MODULE_2__["MonitoringListComponent"], _monitoring_detail_monitoring_detail_component__WEBPACK_IMPORTED_MODULE_3__["MonitoringDetailComponent"], _reversepipe_pipe__WEBPACK_IMPORTED_MODULE_6__["ReversepipePipe"]],
+            providers: [_events_service__WEBPACK_IMPORTED_MODULE_7__["EventsService"], _livedata_service__WEBPACK_IMPORTED_MODULE_8__["LivedataService"], angularfire2_database__WEBPACK_IMPORTED_MODULE_9__["AngularFireDatabase"]]
         })
     ], MonitoringModule);
     return MonitoringModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/monitoring/reversepipe.pipe.ts":
+/*!************************************************!*\
+  !*** ./src/app/monitoring/reversepipe.pipe.ts ***!
+  \************************************************/
+/*! exports provided: ReversepipePipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReversepipePipe", function() { return ReversepipePipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var ReversepipePipe = /** @class */ (function () {
+    function ReversepipePipe() {
+    }
+    ReversepipePipe.prototype.transform = function (value) {
+        if (!value)
+            return;
+        return value.reverse();
+    };
+    ReversepipePipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'reversepipe'
+        })
+    ], ReversepipePipe);
+    return ReversepipePipe;
 }());
 
 
