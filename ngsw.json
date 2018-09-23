@@ -9,11 +9,11 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.66cb86aec4d2255ff053.js",
+        "/main.6985520e1b7b8783c03c.js",
         "/polyfills.7a0e6866a34e280f48e7.js",
         "/runtime.a66f828dca56eeb90e02.js",
         "/scripts.bbaab5518869e4925da1.js",
-        "/styles.397291e40fe2b720e0c7.css"
+        "/styles.183caae142ed34f01cae.css"
       ],
       "patterns": []
     },
@@ -22,6 +22,7 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/assets/Registernummer2.jpg",
         "/assets/RengasCenter_Pjelax_V2.png",
         "/assets/icons/icon-128x128.png",
         "/assets/icons/icon-144x144.png",
@@ -64,6 +65,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/assets/Registernummer2.jpg": "f8cf7edf1f7a201a65533a80b0ed475c56e8a609",
     "/assets/RengasCenter_Pjelax_V2.png": "eb4282e8f28f63039f21344da189cac36f78d5a3",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
@@ -101,12 +103,12 @@
     "/assets/totech_logo.jpg": "4b7cf4f6fa43e7f68051095e955c91007c1fce4e",
     "/assets/totech_logo_inverse.jpg": "32c94f2743cc971862dc91297cca43e7d907a2e4",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "6f139c4774c02033781508de17fcab0be1d73138",
-    "/main.66cb86aec4d2255ff053.js": "0c9d3828692776512fe354985ba1df3e14c006f9",
+    "/index.html": "17630d1d9e9c4dc838faa1f4d0371d7020198f54",
+    "/main.6985520e1b7b8783c03c.js": "52bf6256c754f04678e45207e49b9eab134fba45",
     "/polyfills.7a0e6866a34e280f48e7.js": "9f0b8341c0a0caec1581da2f255eb5dbb8e12303",
     "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
     "/scripts.bbaab5518869e4925da1.js": "73934d48b95f2b08268d567b3981da5b6e494b1f",
-    "/styles.397291e40fe2b720e0c7.css": "bd5a4fcd4645a731e4592f6350ce1cb34cfc8e13"
+    "/styles.183caae142ed34f01cae.css": "a8a28101cc44167793c3f8dadc3ef7e7f368d7e3"
   },
   "navigationUrls": [
     {
